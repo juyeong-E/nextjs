@@ -36,10 +36,7 @@ const App = ({ Component, pageProps, ...other }) => {
                             : pageProps.metaTitle
                     }
                 ></meta>
-                {/* <meta
-                    property="og:image"
-                    content="https://bodyfriend.speedgabia.com/img/bodyfriend/common/logo/logo_bf_grey.svg"
-                ></meta> */}
+                <meta property="og:image" content=""></meta>
 
                 {/* 메타태그 트위터 */}
                 <meta
