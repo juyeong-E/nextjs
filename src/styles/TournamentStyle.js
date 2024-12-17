@@ -101,4 +101,19 @@ export const TournamentStyle = styled.section`
             }
         }
     }
+
+    .ga {
+        padding: 20px;
+        a {
+            display: block;
+            padding: 10px;
+            line-height: 1.6;
+            font-style: normal;
+            text-decoration: auto;
+            font-weight: 700;
+            border-radius: 8px;
+            background: #745fff;
+            color: #fff;
+        }
+    }
 `;

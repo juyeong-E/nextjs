@@ -460,6 +460,14 @@ const Main = ({ title }) => {
                         </button>
                     </div>
                 </div>
+
+                <div className="ga">
+                    <a href="https://otakukaraoke.com/" target="_blank">
+                        경기 한 판 뛰고 노래방 ㄱㄱ?
+                        <br />
+                        오타쿠 가라오케
+                    </a>
+                </div>
             </TournamentStyle>
         </Layout>
     );
