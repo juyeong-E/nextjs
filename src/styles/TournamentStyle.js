@@ -2,7 +2,7 @@ import { styled } from "styled-components";
 
 export const TournamentStyle = styled.section`
     padding: 10px 0;
-    max-width: 450px;
+    max-width: 640px;
     button {
         margin-right: 5px;
         padding: 8px 10px;
@@ -85,11 +85,26 @@ export const TournamentStyle = styled.section`
         }
         .playindex-txt {
             display: inline-block;
-            margin-right: 10px;
+            margin-right: 2px;
             color: #999;
         }
+        .cnt-wrap{
+            margin-bottom: 10px;
+            input {
+                padding: 10px;
+                font-size: 16px;
+                border: 1px solid #ddd;
+                width:50px;
+                text-align: right;
+            }
+        }
+        .tornament-list{
+            padding-top:20px;
+            min-height: 50px;
+        }
         ul {
-            margin: 10px 0;
+            margin: 10px 0 20px 0;
+            border-bottom:1px solid #ddd;
         }
         li {
             margin-bottom: 10px;
@@ -98,6 +113,10 @@ export const TournamentStyle = styled.section`
             font-size: 14px;
             em {
                 padding: 5px 10px;
+            }
+            .winner{
+                font-weight: 700;
+                color:#6397ff;
             }
         }
     }
