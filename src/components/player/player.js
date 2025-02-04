@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Player = ({mode, players , setPlayers}) => {
     // 페이지 로드 시 로컬스토리지에서 선수 불러오기
@@ -49,40 +49,48 @@ const Player = ({mode, players , setPlayers}) => {
             alert("모든 선수 이름을 입력해주세요.");
         }
     };
+
+    const [visibleList , setVisibleList] = useState(true);
+    const handleToggle = () => {
+        setVisibleList(!visibleList)
+    }
     
     return (
         <div className="playerList">
-            <h3>{mode} 선수 입력</h3>
+            <h3 onClick={() => handleToggle()}>{mode} 선수 입력</h3>
             <button
                 onClick={loadPlayersFromLocalStorage}
                 className="btn-load"
             >
                 불러오기
             </button>
-            <ul>
-                {players.map((player, index) => (
-                    <li key={index}>
-                        <label>선수 {index + 1}</label>
-                        <input
-                            type="text"
-                            value={player}
-                            onChange={(e) =>
-                                handlePlayerChange(index, e)
-                            }
-                            placeholder={`선수 ${
-                                index + 1
-                            } 이름 입력`}
-                        />
-                        <button
-                            onClick={() => removePlayer(index)}
-                            className="btn-delete"
-                        >
-                            삭제
-                        </button>
-                    </li>
-                ))}
-            </ul>
-            <div className="btn-wrap">
+            {
+                visibleList &&
+                <ul>
+                    {players.map((player, index) => (
+                        <li key={index}>
+                            <label>선수 {index + 1}</label>
+                            <input
+                                type="text"
+                                value={player}
+                                onChange={(e) =>
+                                    handlePlayerChange(index, e)
+                                }
+                                placeholder={`선수 ${
+                                    index + 1
+                                } 이름 입력`}
+                            />
+                            <button
+                                onClick={() => removePlayer(index)}
+                                className="btn-delete"
+                            >
+                                삭제
+                            </button>
+                        </li>
+                    ))}
+                </ul>
+            }
+            <div className="btn-wrap" style={{marginTop:'5px'}}>
                 <button onClick={addPlayer} className="btn-add">
                     선수 추가
                 </button>

@@ -6,7 +6,7 @@ import Player from "./player/player";
 import PlayList from "./player/playList";
 
 const Main = ({ title }) => {
-    const [mode, setMode] = useState(""); // 복식 or 단식 선택
+    const [mode, setMode] = useState("복식"); // 복식 or 단식 선택
     const [players, setPlayers] = useState([]); // 선수명 입력 관리
     const [playCnt, setPlayCnt] = useState(3);//기본 플레이 생성횟수
     const [tournament, setTournament] = useState([]); // 토너먼트 결과 저장

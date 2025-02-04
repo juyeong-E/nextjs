@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const PlayList = ({tournament,selectWinner , moveUp , moveDown}) => {
 
@@ -10,7 +10,7 @@ const PlayList = ({tournament,selectWinner , moveUp , moveDown}) => {
                     return (
                         playList &&
                         playList.length > 0 && (
-                            <>
+                            <Fragment key={playIndex}>
                                 <span className="playindex-txt">
                                     {playIndex + 1}
                                     번째 경기.{ }
@@ -94,7 +94,7 @@ const PlayList = ({tournament,selectWinner , moveUp , moveDown}) => {
                                         );
                                     })}
                                 </ul>
-                            </>
+                            </Fragment>
                             
                         )
                     );
