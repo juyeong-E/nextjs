@@ -32,14 +32,11 @@ const App = ({ Component, pageProps, ...other }) => {
                     content={
                         pageProps.metaTitle == undefined ||
                         pageProps.metaTitle == ""
-                            ? "고객센터"
+                            ? "토너먼트"
                             : pageProps.metaTitle
                     }
                 ></meta>
-                <meta
-                    property="og:image"
-                    content="https://bodyfriend.speedgabia.com/img/bodyfriend/common/logo/logo_bf_grey.svg"
-                ></meta>
+                <meta property="og:image" content=""></meta>
 
                 {/* 메타태그 트위터 */}
                 <meta
@@ -47,7 +44,7 @@ const App = ({ Component, pageProps, ...other }) => {
                     content={
                         pageProps.metaTitle == undefined ||
                         pageProps.metaTitle == ""
-                            ? "고객센터"
+                            ? "토너먼트"
                             : pageProps.metaTitle
                     }
                 />
@@ -72,7 +69,7 @@ const App = ({ Component, pageProps, ...other }) => {
                 <title>
                     {pageProps.metaTitle == undefined ||
                     pageProps.metaTitle == ""
-                        ? "고객센터"
+                        ? "토너먼트"
                         : pageProps.metaTitle}
                 </title>
             </Head>
